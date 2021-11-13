@@ -77,7 +77,7 @@ async function run(){
             const options = { upsert: true };
             const updateDoc = {
                 $set: {
-                  status:"Done"
+                  status:"Approved"
                 },
               };
             const result = await ordersCollections.updateOne(filter, updateDoc);
@@ -92,7 +92,7 @@ async function run(){
             res.send(result)
         })
 
-        
+
     }
     finally{
         // await client.close()
